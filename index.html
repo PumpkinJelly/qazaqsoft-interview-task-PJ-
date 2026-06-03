@@ -1,73 +1,55 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Quiz — Образовательная платформа</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <main class="container" aria-live="polite">
-      <header class="header">
-        <h1 id="quiz-title">Загрузка…</h1>
-        <div class="meta">
-          <div id="progress" aria-label="Прогресс теста">Вопрос — / —</div>
-          <div id="timer" aria-label="Оставшееся время">—:—</div>
-        </div>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мой тест</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="container">
 
-      <section
-        id="question-section"
-        class="card"
-        aria-labelledby="question-text"
-      >
-        <div id="question-text" class="question-text">Загрузка вопроса…</div>
-        <form
-          id="options-form"
-          class="options"
-          role="radiogroup"
-          aria-label="Варианты ответа"
-        ></form>
-      </section>
+    <h1 id="test-title">Основы веб-разработки</h1>
 
-      <nav class="actions">
-        <button id="btn-prev" class="btn" type="button" aria-label="Назад">
-          Назад
-        </button>
-        <button
-          id="btn-next"
-          class="btn btn-primary"
-          type="button"
-          aria-label="Далее"
-          disabled
-        >
-          Далее
-        </button>
-        <button
-          id="btn-finish"
-          class="btn btn-accent"
-          type="button"
-          aria-label="Завершить"
-          disabled
-        >
-          Завершить
-        </button>
-      </nav>
+    <div id="quiz-screen">
 
-      <section id="result-section" class="card hidden" aria-live="polite">
-        <h2>Результат</h2>
-        <p id="result-summary">—</p>
-        <div class="actions">
-          <button id="btn-review" class="btn" type="button">
-            Посмотреть ответы
-          </button>
-          <button id="btn-restart" class="btn btn-primary" type="button">
-            Пройти заново
-          </button>
-        </div>
-      </section>
-    </main>
+      <p id="progress">Вопрос 1 из 3</p>
 
-    <script src="./app.js" type="module"></script>
-  </body>
+      <div id="question-text">
+
+      </div>
+
+      <div id="options"  class="options" >
+  
+      </div>
+
+      <div class="buttons">
+        <button id="btn-back">« Назад</button>
+        <button id="btn-next">Далее »</button>
+        <button id="btn-finish" style="display: none;">Завершить тест</button>
+      </div>
+
+      <div id="timer">
+        Осталось времени: <span id="time-left">05:00</span>
+      </div>
+
+    </div>
+
+    <div id="result-screen" style="display: none;">
+      <h2>Результат теста</h2>
+      
+      <p id="score-text">Правильных ответов: 0 из 3</p>
+      <p id="percentage" class="percentage">0%</p>
+      
+      <p id="status" class="status">Пройден</p>
+
+      <div class="result-buttons">
+        <button id="btn-restart">Пройти заново</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
 </html>

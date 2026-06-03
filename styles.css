@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  padding: 20px;
+}
+
+h1 { 
+  font-size: 24px; 
+  margin-bottom: 20px; 
+  color: #333;
+}
+
+#progress { 
+  color: #666; 
+  margin-bottom: 15px; 
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#question-text { 
+  font-size: 19px; 
+  margin-bottom: 25px; 
+  line-height: 1.5; 
+  color: #222;
+}
+
+.option-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 14px 18px;
+  margin: 10px 0;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef; 
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #495057;
+  transition: all 0.2s ease; 
+}
+
+.option-btn:hover {
+  background: #e9ecef;
+  border-color: #dee2e6;
+  color: #212529;
+}
+
+.option-btn.selected { 
+  background: #007bff; 
+  border-color: #007bff;
+  color: white; 
+  font-weight: bold;
+}
+
+.buttons { 
+  display: flex; 
+  gap: 12px; 
+  margin: 25px 0 15px 0; 
+}
+
+button {
+  padding: 12px 24px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.15s ease;
+}
+
+button:hover {
+  background: #0069d9;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+#btn-back { 
+  background: #6c757d; 
+}
+#btn-back:hover { 
+  background: #5a6268; 
+}
+
+#btn-finish {
+  background: #28a745;
+}
+#btn-finish:hover {
+  background: #218838;
+}
+
+button:disabled {
+  background: #ced4da !important;
+  color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#timer { 
+  text-align: center; 
+  color: #666; 
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+#time-left { 
+  font-weight: bold; 
+  color: #dc3545; 
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.percentage { 
+  font-size: 42px; 
+  font-weight: bold; 
+  margin: 15px 0; 
+  color: #333;
+}
+
+.status { 
+  font-weight: bold; 
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.status.passed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.failed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+#btn-restart {
+  margin-top: 20px;
+  background: #17a2b8;
+}
+#btn-restart:hover {
+  background: #138496;
+}
